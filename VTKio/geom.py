@@ -152,11 +152,7 @@ UNSTRUCTURED_GRIDで定義した点群データのためのクラス。
 
 attribution:
     geom_type, point_data -> version2より継承。
-    points -> <np.ndarray:float:(num_points, 3) or (num_points, 2)> 各節点の座標値
-    cells -> <tuple:dict:(num_cells, )> 各セル情報。dictのkeyは下記の通り。
-        "type" -> <int> セル形状番号。
-        "indice" -> <np.ndarray:int:(N, )> セルを構成する節点のインデックス番号。
-        N(セルを構成する節点の数)およびインデックス番号の順序はセル形状次第。
+    points, cells -> unstructured_gridより継承。
 
 Note:
     本クラスではcell_dataを定義していない。実質point_data = cell_dataであるため。
